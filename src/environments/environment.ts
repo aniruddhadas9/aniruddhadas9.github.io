@@ -4,5 +4,15 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  restServerUrl: 'https://andycandifood.appspot.com',
+  restUrl: 'http://localhost:8080',
+  latitude: '',
+  longitude: '',
+  ga: {
+    key: 'tempPwd',
+    iv: 'XXXX',
+    trackingId: 'XX-XXXXXXXX-X'
+  }
+
 };

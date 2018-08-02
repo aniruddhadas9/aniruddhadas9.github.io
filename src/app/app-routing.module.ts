@@ -1,16 +1,14 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {LoginComponent} from './core/components/login/login.component';
-import {HomeComponent} from './core/components/home/home.component';
+import {HomeComponent} from './aniruddh/components/home/home.component';
+import {LoginComponent} from '@candifood/core';
+import {DownloadComponent} from './aniruddh/components/download/download.component';
+import {WorkSampleComponent} from './aniruddh/components/work-sample/work-sample.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-  },
-  {
-    path: 'login',
-    component: LoginComponent
   }
 ];
 
