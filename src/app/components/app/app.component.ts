@@ -2,7 +2,7 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {GoogleMap} from '@agm/core/services/google-maps-types';
 import {HttpClient} from '@angular/common/http';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {DownloadComponent} from './aniruddh/components/download/download.component';
+import {DownloadComponent} from '../../aniruddh/components/download/download.component';
 import {MapService} from '@candifood/core';
 
 @Component({
