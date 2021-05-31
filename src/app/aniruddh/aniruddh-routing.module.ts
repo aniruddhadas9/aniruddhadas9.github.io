@@ -1,6 +1,5 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {LoginComponent} from '@candifood/core';
 import {HomeComponent} from './components/home/home.component';
 import {DownloadComponent} from './components/download/download.component';
 import {WorkSampleComponent} from './components/work-sample/work-sample.component';

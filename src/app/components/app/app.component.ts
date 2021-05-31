@@ -3,7 +3,7 @@ import {GoogleMap} from '@agm/core/services/google-maps-types';
 import {HttpClient} from '@angular/common/http';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {DownloadComponent} from '../../aniruddh/components/download/download.component';
-import {MapService} from '@candifood/core';
+import {Footer, Header, HeaderService, MapService} from "@candypal/website";
 
 @Component({
   selector: 'ani-root',
@@ -13,30 +13,146 @@ import {MapService} from '@candifood/core';
 export class AppComponent implements OnInit {
   public title = 'Aniruddha Das';
 
-  public modalRef;
-  public coordinates;
-  public location;
+  public modalRef: any;
+  public coordinates: any;
+  public location: any;
 
   // header links
-  public middleButton;
-  public headerBrand;
-  public headerLeftLinks;
+  public middleButton: any;
+  public headerBrand: any;
+  public headerLeftLinks: any;
+  // header links
+  public header: Header;
 
   // footer links
+  public footer: Footer;
+  // footer links
   public year: string;
-  public social;
-  public brand;
-  public contact;
-  public message;
-  public columnOneLinks;
-  public columnTwoLinks;
+  public social: any;
+  public brand: any;
+  public contact: any;
+  public message: any;
+  public columnOneLinks: any;
+  public columnTwoLinks: any;
 
   constructor(
     private httpClient: HttpClient,
+    private headerService: HeaderService,
     private mapService: MapService,
     private modalService: NgbModal,
     private changeDetectorRef: ChangeDetectorRef
   ) {
+
+    this.header = {
+      brand: {
+        label: 'candifood',
+        url: '/',
+        brandImage: {
+          logo: {
+            imageInAsset: 'candilogo_icon32x32.png',
+            style: {
+              width: '30px',
+              height: '30px'
+            }
+          },
+          style: {
+            'padding-top': '21px'
+          }
+        },
+        style: {
+          'color': '#ffffff',
+          'text-decoration': 'none'
+        }
+      },
+      links: {
+        rightLinks: [
+          {label: 'login', url: '/login'},
+        ],
+        leftLinks: [],
+        style: {
+          'background-color': '#ec7a39',
+          'color': '#f6f6f6',
+          'text-decoration': 'none',
+          'a:link': {
+            'color': '#3eff77'
+          },
+          'a:visited': {
+            'color': '#ff9d19'
+          },
+          'a:hover': {
+            'color': '#fe4d0e'
+          },
+          'a:active': {
+            'color': '#ec7a39'
+          }
+        }
+      },
+      middleButton: {
+        display: true,
+        label: 'finding your location...',
+        loading: true,
+        style: {
+          'background-color': '#ec9a0a',
+          'color': '#ffffff'
+        }
+      },
+      style: {
+        'background-color': '#ec7a39'
+      }
+    };
+
+    this.headerService.header.next(this.header);
+
+    this.footer = {
+      displayTopSection: true,
+      social: {
+        facebook: 'http://www.facebook.com',
+        googlePlus: 'http://www.plus.google.com',
+        twitter: 'http://www.twitter.com',
+        linkedIn: 'http://www.linkedin.com',
+      },
+      copyright: {
+        year: 2018,
+        label: 'candifood team',
+        url: 'https://www.candifood.com'
+      },
+      contact: {
+        name: 'Aniruddha Das',
+        email: 'candifoodindia@gmail.com',
+        phone: '+1 415 650 9102',
+        fax: '+x xxx xxx xxxx'
+      },
+      message: {
+        heading: 'All your eating solution',
+        desc: 'What we eat, it makes a difference in our life. Healthy food does not always comes with good test.' +
+          'We are here to help you to be health as well as take care of your test. Just let us know you.'
+      },
+      columnOneLinks: [
+        {label: 'login', url: '/login', hidden: false},
+        {label: 'Privacy', url: '/privacy', hidden: false}
+      ],
+      columnTwoLinks: [
+        {label: 'profile', url: '/profile', hidden: false}
+      ],
+      style: {
+        'background-color': '#7a690b',
+        'color': '#f99d00',
+        'a:link': {
+          'color': '#ffc11a'
+        },
+        'a:visited': {
+          'color': '#16d3ff'
+        },
+        'a:hover': {
+          'color': '#fbfe11'
+        },
+        'a:active': {
+          'color': '#d0eccb'
+        }
+      }
+    };
+
+
 
     this.middleButton = {
       display: false,
@@ -91,11 +207,41 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit() {
+    // gets the coordinates from the browser and address from google map. this happens first time
+    this.mapService.getBrowserCoordinates({}).subscribe((position: any) => {
+      this.coordinates = position && position.coords;
+      this.mapService.getAddressFromCoordinates({
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude
+      }).subscribe((location: any) => {
+        this.header.middleButton = {
+          display: true,
+          label: location.formatted_address,
+          loading: false
+        };
+        this.changeDetectorRef.detectChanges();
+        // this._getRestaurantsFromMap(location);
+      }, (error) => {
+        this.header.middleButton = {
+          display: true,
+          label: 'select location here.',
+          loading: false
+        };
+      });
+    }, (error) => {
+      this.header.middleButton = {
+        display: true,
+        label: 'select location here.',
+        loading: false
+      };
+    });
+
 
   }
 
 
-  openLocationChangeModel(event) {
+  openLocationChangeModel(event: string) {
+    console.log('openLocationChangeModel|event: %o', event);
     this.modalRef = this.modalService.open(DownloadComponent, {windowClass: 'location-change-modal'});
     /*this.modalRef.componentInstance.input = this.location;
     this.modalRef.componentInstance.output.subscribe((location) => {
