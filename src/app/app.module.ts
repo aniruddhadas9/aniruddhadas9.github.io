@@ -1,14 +1,11 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import {AppRoutingModule} from './app-routing.module';
-import {AppComponent} from './app.component';
-import {AgmCoreModule} from '@agm/core';
-import {CoreModule} from '@candifood/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {AniruddhModule} from './aniruddh/aniruddh.module';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {HttpClientModule} from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './components/app/app.component';
+import {WebsiteModule} from "@candypal/website";
+import {HttpClientModule} from "@angular/common/http";
+import {AniruddhModule} from "./aniruddh/aniruddh.module";
 
 @NgModule({
   declarations: [
@@ -16,23 +13,12 @@ import {HttpClientModule} from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    NgbModule.forRoot(),
     AppRoutingModule,
-    CoreModule.forRoot(),
-    FontAwesomeModule,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyBMIoVYsqVdrlm_IwdKSkLEhpMH7JtEIT8',
-      libraries: [
-        'places'
-      ]
-    }),
+    HttpClientModule,
+    WebsiteModule,
     AniruddhModule
   ],
   providers: [],
-  bootstrap: [
-    AppComponent
-  ]
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
