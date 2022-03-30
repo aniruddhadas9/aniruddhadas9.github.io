@@ -2,7 +2,6 @@ import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {GoogleMap} from '@agm/core/services/google-maps-types';
 import {HttpClient} from '@angular/common/http';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {DownloadComponent} from '../../aniruddh/components/download/download.component';
 import {Footer, Header, HeaderService, MapService} from "@candypal/website";
 import {UsaStateSelectionComponent} from "../../aniruddh/components/usa-state-selection/usa-state-selection.component";
 
@@ -92,7 +91,7 @@ export class AppComponent implements OnInit {
       },
       middleButton: {
         display: true,
-        label: 'finding your location...',
+        label: 'Aniruddha Das',
         loading: true,
         style: {
           'background-color': '#ec9a0a',
@@ -126,9 +125,9 @@ export class AppComponent implements OnInit {
         fax: '+x xxx xxx xxxx'
       },
       message: {
-        heading: 'All your eating solution',
-        desc: 'What we eat, it makes a difference in our life. Healthy food does not always comes with good test.' +
-          'We are here to help you to be health as well as take care of your test. Just let us know you.'
+        heading: 'Architect',
+        desc: 'A architect position is not a badge or class where you dont have to work and relax' +
+          ' but its a position where you more responsibility to controll the work need to be done'
       },
       columnOneLinks: [
         {label: 'login', url: '/login', hidden: false},
@@ -227,14 +226,14 @@ export class AppComponent implements OnInit {
       }, (error) => {
         this.header.middleButton = {
           display: true,
-          label: 'select location here.',
+          label: 'Aniruddha Das',
           loading: false
         };
       });
     }, (error) => {
       this.header.middleButton = {
         display: true,
-        label: 'select location here.',
+        label: 'Aniruddha Das',
         loading: false
       };
     });
