@@ -13,6 +13,7 @@ import {EducationsComponent} from './components/educations/educations.component'
 import {HonorsAndAwardsComponent} from './components/honors-and-awards/honors-and-awards.component';
 import {ProjectsComponent} from './components/projects/projects.component';
 import {UsaStateSelectionComponent} from "./components/usa-state-selection/usa-state-selection.component";
+import {ProfileImageComponent} from "./components/profile-image/profile-image.component";
 
 const components = [
   DownloadComponent,
@@ -26,7 +27,8 @@ const components = [
   EducationsComponent,
   HonorsAndAwardsComponent,
   ProjectsComponent,
-  UsaStateSelectionComponent
+  UsaStateSelectionComponent,
+  ProfileImageComponent
 ]
 
 @NgModule({
