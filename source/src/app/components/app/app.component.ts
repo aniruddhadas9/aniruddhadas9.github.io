@@ -45,19 +45,22 @@ export class AppComponent implements OnInit {
 
     this.header = {
       brand: {
-        label: '',
+        label: 'Aniruddha',
         url: '/',
         brandImage: {
+          display: false,
           logo: {
-            imageInAsset: 'profile-pics/photo3.png',
+            imageInAsset: '.',
+            alt: '.',
             style: {
               top: 0,
-              position: 'absolute',
+              display: 'none',
               width: '150px',
               height: '150px'
             }
           },
           style: {
+            display: 'none',
             'padding-top': '1px'
           }
         },
