@@ -12,25 +12,30 @@ import {ReferenceWebsitesComponent} from './components/reference-websites/refere
 import {EducationsComponent} from './components/educations/educations.component';
 import {HonorsAndAwardsComponent} from './components/honors-and-awards/honors-and-awards.component';
 import {ProjectsComponent} from './components/projects/projects.component';
+import {UsaStateSelectionComponent} from "./components/usa-state-selection/usa-state-selection.component";
+
+const components = [
+  DownloadComponent,
+  HomeComponent,
+  WorkSampleComponent,
+  ContactsComponent,
+  ReferenceComponent,
+  SummaryComponent,
+  ExperienceComponent,
+  ReferenceWebsitesComponent,
+  EducationsComponent,
+  HonorsAndAwardsComponent,
+  ProjectsComponent,
+  UsaStateSelectionComponent
+]
 
 @NgModule({
   imports: [
     CommonModule,
     AniruddhRoutingModule
   ],
-  declarations: [
-    DownloadComponent,
-    HomeComponent,
-    WorkSampleComponent,
-    ContactsComponent,
-    ReferenceComponent,
-    SummaryComponent,
-    ExperienceComponent,
-    ReferenceWebsitesComponent,
-    EducationsComponent,
-    HonorsAndAwardsComponent,
-    ProjectsComponent
-  ]
+  declarations: components,
+  exports: components
 })
 export class AniruddhModule {
 }

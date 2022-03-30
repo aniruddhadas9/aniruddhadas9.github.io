@@ -4,6 +4,7 @@ import {HttpClient} from '@angular/common/http';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {DownloadComponent} from '../../aniruddh/components/download/download.component';
 import {Footer, Header, HeaderService, MapService} from "@candypal/website";
+import {UsaStateSelectionComponent} from "../../aniruddh/components/usa-state-selection/usa-state-selection.component";
 
 @Component({
   selector: 'ani-root',
@@ -45,18 +46,20 @@ export class AppComponent implements OnInit {
 
     this.header = {
       brand: {
-        label: 'candifood',
+        label: '',
         url: '/',
         brandImage: {
           logo: {
-            imageInAsset: 'candilogo_icon32x32.png',
+            imageInAsset: 'profile-pics/photo3.png',
             style: {
-              width: '30px',
-              height: '30px'
+              top: 0,
+              position: 'absolute',
+              width: '150px',
+              height: '150px'
             }
           },
           style: {
-            'padding-top': '21px'
+            'padding-top': '1px'
           }
         },
         style: {
@@ -242,7 +245,7 @@ export class AppComponent implements OnInit {
 
   openLocationChangeModel(event: string) {
     console.log('openLocationChangeModel|event: %o', event);
-    this.modalRef = this.modalService.open(DownloadComponent, {windowClass: 'location-change-modal'});
+    this.modalRef = this.modalService.open(UsaStateSelectionComponent, {windowClass: 'location-change-modal'});
     /*this.modalRef.componentInstance.input = this.location;
     this.modalRef.componentInstance.output.subscribe((location) => {
       this.location = location;
