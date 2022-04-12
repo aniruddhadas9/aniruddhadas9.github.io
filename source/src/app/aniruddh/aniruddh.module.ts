@@ -14,6 +14,8 @@ import {HonorsAndAwardsComponent} from './components/honors-and-awards/honors-an
 import {ProjectsComponent} from './components/projects/projects.component';
 import {UsaStateSelectionComponent} from "./components/usa-state-selection/usa-state-selection.component";
 import {ProfileImageComponent} from "./components/profile-image/profile-image.component";
+import {WebsiteModule} from "@candypal/website";
+import {CarouselModule} from "primeng/carousel";
 
 const components = [
   DownloadComponent,
@@ -34,7 +36,9 @@ const components = [
 @NgModule({
   imports: [
     CommonModule,
-    AniruddhRoutingModule
+    AniruddhRoutingModule,
+    WebsiteModule,
+    CarouselModule
   ],
   declarations: components,
   exports: components

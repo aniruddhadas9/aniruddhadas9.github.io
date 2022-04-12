@@ -1,5 +1,4 @@
 import {ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {GoogleMap} from '@agm/core/services/google-maps-types';
 import {HttpClient} from '@angular/common/http';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Footer, Header, HeaderService, MapService} from "@candypal/website";
@@ -71,6 +70,7 @@ export class AppComponent implements OnInit {
       },
       links: {
         rightLinks: [
+          {label: 'StackOverflow', url: 'https://stackoverflow.com/users/537647/aniruddha-das'},
           {label: 'login', url: '/login'},
         ],
         leftLinks: [],
@@ -213,7 +213,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     // gets the coordinates from the browser and address from google map. this happens first time
-    this.mapService.getBrowserCoordinates({}).subscribe((position: any) => {
+    /*this.mapService.getBrowserCoordinates({}).subscribe((position: any) => {
       this.coordinates = position && position.coords;
       this.mapService.getAddressFromCoordinates({
         latitude: position.coords.latitude,
@@ -239,7 +239,7 @@ export class AppComponent implements OnInit {
         label: 'Aniruddha Das',
         loading: false
       };
-    });
+    });*/
 
 
   }
@@ -257,7 +257,7 @@ export class AppComponent implements OnInit {
     });*/
   }
 
-  mapReady(map: GoogleMap) {
+  mapReady(map: any) {
     this.mapService.map = map;
   }
 
