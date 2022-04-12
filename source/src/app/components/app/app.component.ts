@@ -158,7 +158,6 @@ export class AppComponent implements OnInit {
     };
 
 
-
     this.middleButton = {
       display: false,
       label: 'Trying to get location from device...',

@@ -1,4 +1,4 @@
-import { AniruddhModule } from './aniruddh.module';
+import {AniruddhModule} from './aniruddh.module';
 
 describe('AniruddhModule', () => {
   let aniruddhModule: AniruddhModule;

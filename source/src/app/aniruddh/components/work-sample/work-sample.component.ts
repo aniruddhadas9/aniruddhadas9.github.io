@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ani-work-sample',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WorkSampleComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

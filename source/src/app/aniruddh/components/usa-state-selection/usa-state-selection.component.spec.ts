@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { UsaStateSelectionComponent } from './usa-state-selection.component';
+import {UsaStateSelectionComponent} from './usa-state-selection.component';
 
 describe('UsaStateSelectionComponent', () => {
   let component: UsaStateSelectionComponent;
@@ -8,9 +8,9 @@ describe('UsaStateSelectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ UsaStateSelectionComponent ]
+      declarations: [UsaStateSelectionComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

@@ -16,6 +16,10 @@ import {UsaStateSelectionComponent} from "./components/usa-state-selection/usa-s
 import {ProfileImageComponent} from "./components/profile-image/profile-image.component";
 import {WebsiteModule} from "@candypal/website";
 import {CarouselModule} from "primeng/carousel";
+import {PersonalInformationComponent} from "./components/personal-information/personal-information.component";
+import {DeclarationComponent} from './components/declaration/declaration.component';
+import {WorkExperienceComponent} from "./components/work-experience/work-experience.component";
+import {TechinicalSkillsComponent} from './components/techinical-skills/techinical-skills.component';
 
 const components = [
   DownloadComponent,
@@ -30,7 +34,11 @@ const components = [
   HonorsAndAwardsComponent,
   ProjectsComponent,
   UsaStateSelectionComponent,
-  ProfileImageComponent
+  ProfileImageComponent,
+  PersonalInformationComponent,
+  DeclarationComponent,
+  WorkExperienceComponent,
+  TechinicalSkillsComponent
 ]
 
 @NgModule({

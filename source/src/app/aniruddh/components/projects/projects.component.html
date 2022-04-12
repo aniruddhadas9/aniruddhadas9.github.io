@@ -1,58 +1,53 @@
 <div>
   <div>
-    <p>
-      <strong>PROJECTS EXPERIENCE</strong>
-    </p>
+    <strong>PROJECTS</strong>
   </div>
 
   <div>
-
     <p-carousel [value]="projects" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
       <ng-template let-project pTemplate="item">
-        <div class="card-header">
-          <h5>{{project.name}}</h5>
-        </div>
-        <div class="card-body">
-          <p>
-            Project Name : {{project.name}}
-          </p>
-          <p>
-            Role : {{project.role}}
-          </p>
-          <p>
-            Client : {{project.client}}
-          </p>
-          <p>
-            Application Server : {{project.applicationServer}}
-          </p>
-          <p>
-            Duration : {{project.duration}}
-          </p>
-          <p>
-            Team : {{project.team}}
-          </p>
-          <p>
-            Technology used: {{project.technologyUsed}}
-          </p>
-          <p>
-            Tools : {{project.tools}}
-          </p>
-          <p>
-            Description: {{project.description}}
-          </p>
-          <p class="card-text">
-            <cfs-read-more
-              [text]="project.description"
-              [maxLength]="100"
-              [linkLabel]="'...read more'"
-              [hideLink]="false">
-            </cfs-read-more>
-          </p>
+        <div class="card">
+          <div class="card-header">
+            <h5>{{project.name}}</h5>
+          </div>
+          <div class="card-body">
+            <p>
+              Project Name: {{project.name}}
+            </p>
+            <p>
+              Role: {{project.role}}
+            </p>
+            <p>
+              Client: {{project.client}}
+            </p>
+            <p>
+              Application Server: {{project.applicationServer}}
+            </p>
+            <p>
+              Duration: {{project.duration}}
+            </p>
+            <p>
+              Team: {{project.team}}
+            </p>
+            <p>
+              Technology used: {{project.technologyUsed}}
+            </p>
+            <p>
+              Tools: {{project.tools}}
+            </p>
+            <p class="card-text">
+              Description:
+              <cfs-read-more
+                [text]="project.description"
+                [maxLength]="100"
+                [linkLabel]="'...read more'"
+                [hideLink]="false">
+              </cfs-read-more>
+            </p>
+          </div>
         </div>
       </ng-template>
     </p-carousel>
-
-
   </div>
 
 </div>
