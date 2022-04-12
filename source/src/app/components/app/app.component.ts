@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
 
     this.header = {
       brand: {
-        label: 'Aniruddha',
+        label: 'Engineer',
         url: '/',
         brandImage: {
           display: false,

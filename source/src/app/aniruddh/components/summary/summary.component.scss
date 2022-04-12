@@ -1,0 +1,9 @@
+.title {
+  margin-bottom: 15px;
+}
+
+@media print {
+  .title {
+    margin-top: 200px
+  }
+}

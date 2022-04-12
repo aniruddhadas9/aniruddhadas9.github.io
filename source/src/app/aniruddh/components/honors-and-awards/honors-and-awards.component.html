@@ -1,47 +1,26 @@
-<div>
-  <p>
-    <strong>Honors &amp; Awards </strong>
-    <strong></strong>
-  </p>
+<div class="main-page">
+  <div>
+      <strong>Honors &amp; Awards </strong>
+  </div>
+
+  <ul class="awards">
+    <li class="award" *ngFor="let award of awards">
+
+      <p>
+        <b>{{award.title}}</b>
+        (<span [hidden]="!award.url"><a target="_blank" [href]="award.url">more details</a></span>)
+      </p>
+      <div class="details">
+        <cfs-read-more
+          [text]="award.description"
+          [maxLength]="300"
+          [linkLabel]="'...read more'"
+          [hideLink]="false">
+        </cfs-read-more>
+      </div>
+
+    </li>
+  </ul>
+
 </div>
-<p>
-  <strong></strong>
-</p>
-<p>
-  <strong>
-    NN/G 2012 Intranet Design Annual Award winners (January 2012):
-  </strong>
-  <strong></strong>
-</p>
-<p>
-  <strong>Link: </strong>
-  <a href="http://www.nngroup.com/news/item/2012-intranet-design-awards/">
-    http://www.nngroup.com/news/item/2012-intranet-design-awards/
-  </a>
-</p>
-<p>
-  NCR Corporation's intranet designers used a significant reorganization as
-  an opportunity to help make information more transparent to all. Taking
-  cues from organizational restructuring, they defined one IA and search,
-  eliminating many issues from both the individual and company perspectives.
-  In this winning design, people can find their information while hitting
-  fewer pages and sites, so they can spend less time pursuing content and
-  more time consuming it.
-</p>
-<p>
-  The NCR intranet team: Sushil Bharwani, Naveen Verma, Abhishek Anand,
-  Prashant Yadav, Prateek Narang, <strong>Anirudha Das</strong>, Jai Prakash
-  Mishra, Rudresh Shrotriya, Abdul Momin Khan, Mohit Sharma, Kenny Monteith,
-  Myria Williams, Vic Shoup, Omar Gosh, Joshua Smith, Colleen Swanger, Stuart
-  Gray, and Angelo Kalevela.
-</p>
-<p>
-  <strong>Polymorphin Rangers (September 2015): </strong>
-  Recognized by Bank of America GWBT for contribution towards hack/a/thon_
-  innovation project.
-</p>
-<p>
-  <strong>Smile Award (October 2013): </strong>
-  Recognized by Management of NCR Corporation for contribution towards ARCS
-  Customer account alignment project.
-</p>
+

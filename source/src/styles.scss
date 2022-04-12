@@ -4,3 +4,9 @@ body {
     margin: 0;
   }
 }
+
+
+@media print {
+  cfs-header, cfs-footer { display: none !important; }
+
+}

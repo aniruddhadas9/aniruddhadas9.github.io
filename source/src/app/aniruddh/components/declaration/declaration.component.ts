@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-declaration',
+  selector: 'ani-declaration',
   templateUrl: './declaration.component.html',
   styleUrls: ['./declaration.component.scss']
 })
