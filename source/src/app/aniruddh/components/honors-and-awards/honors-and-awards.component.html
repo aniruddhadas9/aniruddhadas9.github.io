@@ -1,3 +1,26 @@
-<p>
-  honors-and-awards works!
-</p>
+<div class="main-page">
+  <div>
+      <strong>Honors &amp; Awards </strong>
+  </div>
+
+  <ul class="awards">
+    <li class="award" *ngFor="let award of awards">
+
+      <p>
+        <b>{{award.title}}</b>
+        (<span [hidden]="!award.url"><a target="_blank" [href]="award.url">more details</a></span>)
+      </p>
+      <div class="details">
+        <cfs-read-more
+          [text]="award.description"
+          [maxLength]="300"
+          [linkLabel]="'...read more'"
+          [hideLink]="false">
+        </cfs-read-more>
+      </div>
+
+    </li>
+  </ul>
+
+</div>
+

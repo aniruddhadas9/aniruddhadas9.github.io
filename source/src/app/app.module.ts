@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './components/app/app.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './components/app/app.component';
 import {WebsiteModule} from "@candypal/website";
 import {HttpClientModule} from "@angular/common/http";
 import {AniruddhModule} from "./aniruddh/aniruddh.module";
@@ -21,4 +21,5 @@ import {AniruddhModule} from "./aniruddh/aniruddh.module";
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
