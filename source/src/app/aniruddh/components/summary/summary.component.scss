@@ -1,9 +1,32 @@
-.title {
+.page {
   margin-bottom: 15px;
+  .title {
+    margin-bottom: 12px;
+    .social {
+      text-align: right;
+      span {
+        margin: 2px 10px;
+        a {
+          .linkedin {
+            color: #0a53be;
+          }
+          .github {
+            color: #000000;
+          }
+          .stackoverflow {
+            color: #d28d18;
+          }
+          .print {
+            color: #000000;
+          }
+        }
+      }
+    }
+  };
 }
 
 @media print {
   .title {
-    margin-top: 200px
+    margin-top: 170px
   }
 }

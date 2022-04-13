@@ -7,7 +7,6 @@ import {AniruddhRoutingModule} from './aniruddh-routing.module';
 import {ContactsComponent} from './components/contacts/contacts.component';
 import {ReferenceComponent} from './components/reference/reference.component';
 import {SummaryComponent} from './components/summary/summary.component';
-import {ExperienceComponent} from './components/experience/experience.component';
 import {ReferenceWebsitesComponent} from './components/reference-websites/reference-websites.component';
 import {EducationsComponent} from './components/educations/educations.component';
 import {HonorsAndAwardsComponent} from './components/honors-and-awards/honors-and-awards.component';
@@ -20,6 +19,7 @@ import {PersonalInformationComponent} from "./components/personal-information/pe
 import {DeclarationComponent} from './components/declaration/declaration.component';
 import {WorkExperienceComponent} from "./components/work-experience/work-experience.component";
 import {TechinicalSkillsComponent} from './components/techinical-skills/techinical-skills.component';
+import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
 
 const components = [
   DownloadComponent,
@@ -28,7 +28,6 @@ const components = [
   ContactsComponent,
   ReferenceComponent,
   SummaryComponent,
-  ExperienceComponent,
   ReferenceWebsitesComponent,
   EducationsComponent,
   HonorsAndAwardsComponent,
@@ -46,7 +45,8 @@ const components = [
     CommonModule,
     AniruddhRoutingModule,
     WebsiteModule,
-    CarouselModule
+    CarouselModule,
+    FontAwesomeModule
   ],
   declarations: components,
   exports: components

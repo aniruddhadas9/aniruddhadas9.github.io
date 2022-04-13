@@ -70,7 +70,6 @@ export class AppComponent implements OnInit {
       },
       links: {
         rightLinks: [
-          {label: 'StackOverflow', url: 'https://stackoverflow.com/users/537647/aniruddha-das'},
           {label: 'login', url: '/login'},
         ],
         leftLinks: [],
@@ -93,7 +92,7 @@ export class AppComponent implements OnInit {
         }
       },
       middleButton: {
-        display: true,
+        display: false,
         label: 'Aniruddha Das',
         loading: true,
         style: {
