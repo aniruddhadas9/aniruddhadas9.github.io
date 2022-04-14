@@ -17,7 +17,7 @@
             color: #d28d18;
           }
           .print {
-            color: #000000;
+            color: #706f6f;
           }
         }
       }
@@ -28,5 +28,8 @@
 @media print {
   .title {
     margin-top: 170px
+  }
+  .print {
+    display: none;
   }
 }

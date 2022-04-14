@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
 
     this.header = {
       brand: {
-        label: 'Engineer',
+        label: 'Principal Frontend Engineer | UI Architect',
         url: '/',
         brandImage: {
           display: false,
@@ -128,8 +128,8 @@ export class AppComponent implements OnInit {
       },
       message: {
         heading: 'Architect',
-        desc: 'A architect position is not a badge or class where you dont have to work and relax' +
-          ' but its a position where you more responsibility to controll the work need to be done'
+        desc: 'Architect is not a badge or class where you dont have to work' +
+          ' but role with responsibility to shape the entire ecosystem. You control your work.'
       },
       columnOneLinks: [
         {label: 'login', url: '/login', hidden: false},

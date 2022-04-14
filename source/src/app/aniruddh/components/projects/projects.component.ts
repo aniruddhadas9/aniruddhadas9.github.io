@@ -11,6 +11,7 @@ export class ProjectsComponent implements OnInit {
 
   projects: Array<Project> = [];
   responsiveOptions: any
+  page: number = 1;
 
   constructor(
     private resumeDataService: ResumeDataService
@@ -38,4 +39,7 @@ export class ProjectsComponent implements OnInit {
     this.projects = this.resumeDataService.projects;
   }
 
+  setPage(page: any){
+    this.page++;
+  }
 }

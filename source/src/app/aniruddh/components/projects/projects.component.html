@@ -1,53 +1,63 @@
-<div>
-  <div>
-    <strong>PROJECTS</strong>
-  </div>
+<div class="projects">
+  <strong>Projects</strong>
+  <div class="card">
+    <div class="card-body">
 
-  <div>
-    <p-carousel [value]="projects" [numVisible]="1" [numScroll]="1" [responsiveOptions]="responsiveOptions">
-      <ng-template let-project pTemplate="item">
-        <div class="card">
-          <div class="card-header">
-            <h5>{{project.name}}</h5>
+      <p-carousel
+        [value]="projects"
+        [numVisible]="1"
+        [numScroll]="1"
+        [showIndicators]="true"
+        [showNavigators]="true"
+        [responsiveOptions]="responsiveOptions"
+        (onPage)="setPage($event)">
+        <!--<ng-template pTemplate="header">
+          <h5>Vertical</h5>
+        </ng-template>-->
+        <ng-template let-i="index" let-project pTemplate="item">
+          <div class="project">
+            <div class="project-header">
+              <h5>{{page}}. {{project.name}}</h5>
+            </div>
+            <div class="project-body">
+              <p>
+                Project Name: {{project.name}}
+              </p>
+              <p>
+                Role: {{project.role}}
+              </p>
+              <p>
+                Client: {{project.client}}
+              </p>
+              <p>
+                Application Server: {{project.applicationServer}}
+              </p>
+              <p>
+                Duration: {{project.duration}}
+              </p>
+              <p>
+                Team: {{project.team}}
+              </p>
+              <p>
+                Technology used: {{project.technologyUsed}}
+              </p>
+              <p>
+                Tools: {{project.tools}}
+              </p>
+              <p class="card-text">
+                Description:
+                <cfs-read-more
+                  [text]="project.description"
+                  [maxLength]="100"
+                  [showLinkLabel]="'...read more'"
+                  [hideLink]="false">
+                </cfs-read-more>
+              </p>
+            </div>
           </div>
-          <div class="card-body">
-            <p>
-              Project Name: {{project.name}}
-            </p>
-            <p>
-              Role: {{project.role}}
-            </p>
-            <p>
-              Client: {{project.client}}
-            </p>
-            <p>
-              Application Server: {{project.applicationServer}}
-            </p>
-            <p>
-              Duration: {{project.duration}}
-            </p>
-            <p>
-              Team: {{project.team}}
-            </p>
-            <p>
-              Technology used: {{project.technologyUsed}}
-            </p>
-            <p>
-              Tools: {{project.tools}}
-            </p>
-            <p class="card-text">
-              Description:
-              <cfs-read-more
-                [text]="project.description"
-                [maxLength]="100"
-                [linkLabel]="'...read more'"
-                [hideLink]="false">
-              </cfs-read-more>
-            </p>
-          </div>
-        </div>
-      </ng-template>
-    </p-carousel>
-  </div>
+        </ng-template>
+      </p-carousel>
+    </div>
 
+  </div>
 </div>
