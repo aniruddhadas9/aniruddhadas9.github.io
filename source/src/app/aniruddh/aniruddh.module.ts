@@ -38,7 +38,8 @@ const components = [
   PersonalInformationComponent,
   DeclarationComponent,
   WorkExperienceComponent,
-  TechinicalSkillsComponent
+  TechinicalSkillsComponent,
+  SocialLinksComponent
 ]
 
 @NgModule({
@@ -49,10 +50,7 @@ const components = [
     CarouselModule,
     FontAwesomeModule
   ],
-    declarations: [
-        components,
-        SocialLinksComponent
-    ],
+  declarations: components,
   exports: components
 })
 export class AniruddhModule {
