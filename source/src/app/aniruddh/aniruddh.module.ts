@@ -20,6 +20,7 @@ import {DeclarationComponent} from './components/declaration/declaration.compone
 import {WorkExperienceComponent} from "./components/work-experience/work-experience.component";
 import {TechinicalSkillsComponent} from './components/techinical-skills/techinical-skills.component';
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
+import {SocialLinksComponent} from "./social-links/social-links.component";
 
 const components = [
   DownloadComponent,
@@ -37,7 +38,8 @@ const components = [
   PersonalInformationComponent,
   DeclarationComponent,
   WorkExperienceComponent,
-  TechinicalSkillsComponent
+  TechinicalSkillsComponent,
+  SocialLinksComponent
 ]
 
 @NgModule({

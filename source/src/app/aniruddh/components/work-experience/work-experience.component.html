@@ -8,7 +8,7 @@
       <h6>{{workExperience.company}}</h6>
       <ul class="detail">
         <li *ngFor="let exp of workExperience.experience">
-          {{exp}}
+         <span [innerHTML]="exp"></span>
         </li>
       </ul>
     </div>
