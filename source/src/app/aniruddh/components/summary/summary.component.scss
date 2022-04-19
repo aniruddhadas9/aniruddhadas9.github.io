@@ -1,7 +1,17 @@
-
+.summary {
+  .name {
+    margin-bottom: 12px;
+  }
+  .about {
+    margin-bottom: 12px;
+  }
+  .skills {
+    margin-bottom: 12px;
+  }
+}
 @media print {
-  .title {
-    margin-top: 170px
+  .summary {
+    margin-top: 140px
   }
   .print {
     display: none;
