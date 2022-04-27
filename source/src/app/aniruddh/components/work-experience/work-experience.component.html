@@ -5,7 +5,11 @@
 
   <div class="companies">
     <div class="company" *ngFor="let workExperience of workExperiences">
-      <h6>{{workExperience.company}}</h6>
+      <h6>
+        <u>{{workExperience.company}} ({{workExperience.startDate}}-{{workExperience.endDate}}) -<b>{{workExperience.title}}</b>
+        </u>
+      </h6>
+      <p></p>
       <ul class="detail">
         <li *ngFor="let exp of workExperience.experience">
          <span [innerHTML]="exp"></span>
