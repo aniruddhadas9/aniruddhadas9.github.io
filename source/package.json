@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "move": "mv  -v dist/aniruddhadas9/* ../",
+    "move": "mv -v dist/aniruddhadas9/* ../",
     "build": "ng build && npm run move",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
