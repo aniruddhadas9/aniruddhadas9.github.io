@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'ani-declaration',
@@ -7,6 +7,10 @@ import {Component, OnInit} from '@angular/core';
 })
 export class DeclarationComponent implements OnInit {
 
+  @Input() name: string = 'Aniruddha Das';
+  @Input() heading: string = 'Declaration';
+  @Input() declarationText: string = 'I hereby declare that the above written particulars are to the best of my knowledge &amp; belief.';
+  @Input() signature: string = 'Aniruddha Das';
   constructor() {
   }
 

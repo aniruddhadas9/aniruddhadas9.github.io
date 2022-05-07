@@ -1,19 +1,9 @@
 <div class="component">
   <p>
-    <strong>Technical Skills</strong>
+    <strong>{{heading}}</strong>
   </p>
 
   <div class="skills">
-    <p>Frontend (UI): TypeScript, JavaScript, HTML5, SCSS, SASS, CSS3</p>
-    <p>Frontend Frameworks: Angular, React, jQuery, jQuery Mobile</p>
-    <p>RDBMS : Oracle 11g, PL/SQL, SQL, MySQL5.5, Google Cloud datastore.</p>
-    <p>Cloud platforms : Google Cloud platform, Google App Engine, AWS</p>
-    <p>Web Server : Tomcat, XAMPP, App Engine Server, AWS</p>
-    <p>Backend: JAVA/J2EE, PHP, spring, Spring Boot, NodeJS, etc</p>
-    <p>Backend Framework : Spring 4, Struts 1.2/2, CakePHP, Cucumber, etc</p>
-    <p>IDE : InteliJ, WebStorm, Eclipse, My Eclipse, SQL Navigator.</p>
-    <p>Source Control : Git, Google Cloud source, SVN, CVS, Perforce</p>
-    <p>Operating Systems : IOS, Windows, Ubuntu Linux, UNIX</p>
-    <p>Tools : Git, JIRA, BMC Remedy, Incident manager, Star, etc.</p>
+    <p *ngFor="let skill of skills"><span [innerHTML]="skill"></span></p>
   </div>
 </div>
